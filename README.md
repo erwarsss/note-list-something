@@ -48,8 +48,21 @@ console.log(totalAmount)
 
 callback adalah function yang di jadikan parameter
 
-```
-var 
+
+```javascript
+function sumberData() {
+  var num = [{num: 2}, {num: 1}, {num: 5}]
+  return num
+}
+
+function pengolahan(callback) {
+  callback.map(x => {
+  return x.num
+  })
+}
+
+pengolahan(sumberData()) 
+//it will log: 2 1 5
 ```
 
 # Recursion 
@@ -69,22 +82,4 @@ function countDown(numb) {
 
 countDown(10)
 
-```
-
-# Callback
-
-```javascript
-function sumberData() {
-  var num = [{num: 2}, {num: 1}, {num: 5}]
-  return num
-}
-
-function pengolahan(callback) {
-  callback.map(x => {
-  return x.num
-  })
-}
-
-pengolahan(sumberData()) 
-//it will log: 2 1 5
 ```
