@@ -25,13 +25,13 @@ var totalAmount = orders.reduce((sum, order) => {
     return sum + order.amount
 }, 0)
 
-var totalAmount = orders.reduce((sum, order) => 
+var totalAmount = orders.reduce((sum, order) =>
     sum + order.amount
 , 0)
 
 var totalAmount = orders.reduce((sum, order) => sum + order.amount, 0)
 
-//using loop 
+//using loop
 var totalAmount = 0
 for (var i = 0; i < orders.length; i++) {
     totalAmount += orders[i].amount
@@ -44,7 +44,7 @@ console.log(totalAmount)
 2. dan tidak mempunyai `side-effect`
 
 
-## Callback 
+## Callback
 
 callback adalah function yang di jadikan parameter
 
@@ -61,21 +61,21 @@ function pengolahan(callback) {
   })
 }
 
-pengolahan(sumberData()) 
+pengolahan(sumberData)
 //it will log: 2 1 5
 ```
 
-# Recursion 
+# Recursion
 
 recursion adalah sebuah function yang memanggil function itu sendiri
 
-example: 
+example:
 ```javascript
 
 function countDown(numb) {
   if (numb === 0) {
     return
-  } 
+  }
   console.log(numb)
   countDown(numb - 1)
 }
